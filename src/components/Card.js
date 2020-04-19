@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, View, Text } from 'react-native'
+import { Image, View, Text, TouchableOpacity } from 'react-native'
 import styles from '../styles/styles'
 
 const Card = (props) => {
@@ -18,7 +18,17 @@ const Card = (props) => {
             </View>
             <View style={styles.footerCard}>
                 <Text style={{margin: 10, bottom: 10}}>Área: {props.area}</Text>
-                <Text style={{margin: 10, bottom: 10}}>Ver Perfil</Text>
+                <TouchableOpacity
+                onPress={() => props.navigation.navigate('Perfil', {
+                                name: props.name,
+                                servico: props.servico,
+                                foto: props.foto,
+                                nota: props.nota,
+                                distancia: props.distancia,
+                                area: props.area
+                            })}>
+                <   Text style={{margin: 10, bottom: 10}}>Ver Perfil</Text>  
+                </TouchableOpacity>
             </View>
             
         </>

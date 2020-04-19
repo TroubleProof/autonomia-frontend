@@ -93,6 +93,12 @@ const styles = StyleSheet.create({
     footerCard: {
         flexDirection: "row",
         justifyContent: "space-between"
+    },
+    perfil: {
+        margin: 15,
+        width: "80%",
+        borderWidth: 1,
+        height: 100
     }
   })
 
