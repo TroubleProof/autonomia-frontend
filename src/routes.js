@@ -6,8 +6,12 @@ import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
 import Main from './pages/Main'
 import Perfil from './pages/Perfil'
+import Agendamento from './pages/Agendamento'
+import MedidasPrevencao from './pages/MedidasPrevencao'
+import Configuracoes from './pages/Configuracoes'
 import Landing from './pages/Landing/index'
 import UserType from './pages/UserType/index'
+
 
 const Stack = createStackNavigator();
 
@@ -15,7 +19,7 @@ function RootStack() {
     return (
         <NavigationContainer>
             <Stack.Navigator
-                    initialRouteName="Landing"
+                    initialRouteName="Configuracoes"
                     screenOptions={{ gestureEnabled: false, headerShown: false }}
             >
                 <Stack.Screen
@@ -47,6 +51,21 @@ function RootStack() {
                 name="UserType"
                 component={UserType}
                 options={{ title: 'UserType' }}
+                />
+                <Stack.Screen
+                name="Agendamento"
+                component={Agendamento}
+                options={{ title: 'Agendamento' }}
+                />
+                <Stack.Screen
+                name="MedidasPrevencao"
+                component={MedidasPrevencao}
+                options={{ title: 'MedidasPrevencao' }}
+                />
+                <Stack.Screen
+                name="Configuracoes"
+                component={Configuracoes}
+                options={{ title: 'Configuracoes' }}
                 />
             </Stack.Navigator>
         </NavigationContainer>
