@@ -7,7 +7,7 @@ import Card from '../components/Card'
 const Main = ({navigation}) => {
     const [data, setData] = useState([
         {
-            id: 1,
+            id: "1",
             nome: "Agnys Bueno",
             servico: "Desenvolvedora Full Stack",
             area: "Tecnologia",
@@ -16,7 +16,7 @@ const Main = ({navigation}) => {
             foto: ""
         },
         {
-            id: 2,
+            id: "2",
             nome: "Agnys Bueno",
             servico: "Desenvolvedora Full Stack",
             area: "Tecnologia",
@@ -25,7 +25,7 @@ const Main = ({navigation}) => {
             foto: ""
         },
         {
-            id: 3,
+            id: "3",
             nome: "Agnys Bueno",
             servico: "Desenvolvedora Full Stack",
             area: "Tecnologia",
@@ -34,7 +34,7 @@ const Main = ({navigation}) => {
             foto: ""
         },
         {
-            id: 4,
+            id: "4",
             nome: "Agnys Bueno",
             servico: "Desenvolvedora Full Stack",
             area: "Tecnologia",
@@ -43,7 +43,7 @@ const Main = ({navigation}) => {
             foto: ""
         },
         {
-            id: 5,
+            id: "5",
             nome: "Agnys Bueno",
             servico: "Desenvolvedora Full Stack",
             area: "Tecnologia",
@@ -70,7 +70,7 @@ const Main = ({navigation}) => {
                     horizontal={false}
                     renderItem={({ item }) => {
                         return (
-                            <TouchableOpacity 
+                            <View 
                             style={styles.item}>
                                 <Card 
                                 name={item.nome} 
@@ -78,8 +78,9 @@ const Main = ({navigation}) => {
                                 area={item.area}
                                 distancia={item.distancia}
                                 nota={item.nota}
-                                foto={item.foto}/>
-                            </TouchableOpacity>
+                                foto={item.foto}
+                                navigation={navigation}/>
+                            </View>
                         )
                     }}
                 />
