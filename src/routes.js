@@ -19,7 +19,7 @@ function RootStack() {
     return (
         <NavigationContainer>
             <Stack.Navigator
-                    initialRouteName="Configuracoes"
+                    initialRouteName="Landing"
                     screenOptions={{ gestureEnabled: false, headerShown: false }}
             >
                 <Stack.Screen
