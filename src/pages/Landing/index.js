@@ -1,28 +1,33 @@
 import React, {useState, useEffect} from 'react';
 import { Image, View, Text, TextInput, TouchableOpacity, Keyboard, FlatList, Button } from 'react-native'
-import styles from '../styles/styles'
+import styles from './styles';
 import {FontAwesome5} from '@expo/vector-icons'
+
+import landingBanner from "../../assets/landing-banner.png";
+import logo from "../../../assets/logo.png";
 
 const Landing = ({navigation}) => {
 
-    return(
+    return (
         <>
             <View style={styles.container}>
-                <View style={styles.landingHeader}>
-                    <Image style={{width: 80, height: 80}} source={require('../../assets/logo_pw.png')}/>
+                <View style={styles.header}>
+                    <Image style={styles.header__img} source={logo}/>
                     <Text 
-                    style={{color:"#4c1b72", fontWeight: "bold", fontSize: 25}}>
+                    style={styles.header__text}>
                         {`Mais segurança \npara você e o \nseu negócio`}
                     </Text>
                 </View>
-                <View style={styles.inputs}>
-                    <Image style={{width: 315, height: 270}} source={require('../../assets/people.png')}/>
-                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('UserType')}>
-                        <Text style={{color: "white", fontWeight: "bold", fontSize: 18}}>Começar</Text>
+
+                <Image style={styles.banner} source={landingBanner}/>
+                
+                <View style={styles.footer}>
+                    <TouchableOpacity style={styles.footer__button} onPress={() => navigation.navigate('UserType')}>
+                        <Text style={styles.footer__textBtn}>Começar</Text>
                     </TouchableOpacity>
                     <View style={{flexDirection: 'row'}}>
                         <FontAwesome5 name='lightbulb' size={20}  color="#F3A628"/>
-                        <Text style={{marginLeft: 10}}>Saber mais sobre o app</Text>
+                        <Text style={styles.footer__text}>Saber mais sobre o app</Text>
                     </View>
                 </View>
             </View>
