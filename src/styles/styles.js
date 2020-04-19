@@ -9,6 +9,14 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         backgroundColor: "#FFFFFF"
     },
+    landingHeader:{
+        flexDirection: 'row',
+        width: "100%", 
+        height: 100, 
+        marginTop: "10%",
+        justifyContent: "space-around",
+        alignItems: "center",      
+    },
     mainText: {
         textAlign: "center",
         color: "#4c1b72",
@@ -41,6 +49,16 @@ const styles = StyleSheet.create({
         width: "80%",
         height: 60,
         marginBottom: 80,
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    buttonUserType: {
+        marginTop: 10,
+        backgroundColor: "#4c1b72",
+        borderRadius: 5,
+        width: "80%",
+        height: 60,
+        marginBottom: 5,
         justifyContent: "center",
         alignItems: "center"
     },
