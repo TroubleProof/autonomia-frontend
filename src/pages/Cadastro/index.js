@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { Image, View, Text, TextInput, TouchableOpacity, Keyboard, FlatList, Button, ScrollView } from 'react-native'
-import styles from '../styles/styles'
+import styles from './styles'
 import {FontAwesome5} from '@expo/vector-icons'
+
+import logo from "../../../assets/logo.png"
 
 const Cadastro = ({navigation}) => {
 
@@ -9,7 +11,7 @@ const Cadastro = ({navigation}) => {
         <>
             <View style={styles.container}>
                 <View style={styles.header}>
-                <Image style={{width: 150, height: 150}} source={require('../../assets/logo_pw.png')}/>
+                <Image style={{width: 150, height: 150}} source={logo}/>
                 </View>
                 <ScrollView contentContainerStyle={styles.inputs}>
                     <TextInput style={styles.input} placeholder='Nome completo'/>
