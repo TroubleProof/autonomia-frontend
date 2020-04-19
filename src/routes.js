@@ -6,6 +6,8 @@ import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
 import Main from './pages/Main'
 import Perfil from './pages/Perfil'
+import Landing from './pages/Landing'
+import UserType from './pages/UserType'
 
 const Stack = createStackNavigator();
 
@@ -13,7 +15,7 @@ function RootStack() {
     return (
         <NavigationContainer>
             <Stack.Navigator
-                    initialRouteName="Main"
+                    initialRouteName="Landing"
                     screenOptions={{ gestureEnabled: false, headerShown: false }}
             >
                 <Stack.Screen
@@ -35,6 +37,16 @@ function RootStack() {
                 name="Perfil"
                 component={Perfil}
                 options={{ title: 'Perfil' }}
+                />
+                <Stack.Screen
+                name="Landing"
+                component={Landing}
+                options={{ title: 'Landing' }}
+                />
+                <Stack.Screen
+                name="UserType"
+                component={UserType}
+                options={{ title: 'UserType' }}
                 />
             </Stack.Navigator>
         </NavigationContainer>

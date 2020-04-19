@@ -9,7 +9,7 @@ const Login = ({navigation}) => {
         <>
             <View style={styles.container}>
                 <View style={styles.header}>
-                    <Text style={styles.mainText}>LOGIN</Text>
+                    <Image style={{width: 150, height: 150}} source={require('../../assets/logo_pw.png')}/>
                 </View>
                 <View style={styles.inputs}>
                     <TextInput style={styles.input}
@@ -21,7 +21,7 @@ const Login = ({navigation}) => {
                     <TouchableOpacity >
                         <Text style={styles.secondaryText}>Esqueceu sua senha?</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Main')}>
                         <Text style={{color: "white", fontWeight: "bold", fontSize: 18}}>Entrar</Text>
                     </TouchableOpacity>
                     <Text>Não tem conta? Cadastre-se</Text>

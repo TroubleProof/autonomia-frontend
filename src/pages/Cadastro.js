@@ -9,7 +9,7 @@ const Cadastro = ({navigation}) => {
         <>
             <View style={styles.container}>
                 <View style={styles.header}>
-                    <Text style={styles.mainText}>CADASTRO</Text>
+                <Image style={{width: 150, height: 150}} source={require('../../assets/logo_pw.png')}/>
                 </View>
                 <ScrollView contentContainerStyle={styles.inputs}>
                     <TextInput style={styles.input} placeholder='Nome completo'/>
@@ -30,7 +30,7 @@ const Cadastro = ({navigation}) => {
                     <TextInput style={styles.input} placeholder='Escolher arquivo...'/>
                     <TextInput style={styles.input} placeholder='Criar Senha' secureTextEntry={true}/>
                     <TextInput style={styles.input} placeholder='Digite novamente a senha' secureTextEntry={true}/>
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
                         <Text style={{color: "white", fontWeight: "bold", fontSize: 18}}>Entrar</Text>
                     </TouchableOpacity>
                 </ScrollView>
